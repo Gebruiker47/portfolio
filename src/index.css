@@ -17,6 +17,9 @@
   --header-color: #fff;
 }
 
+test-comp-2 {
+  color: red;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
