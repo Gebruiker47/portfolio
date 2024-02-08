@@ -17,6 +17,9 @@
   --header-color: #fff;
 }
 
+h1 {
+  color: red;
+}
 test-comp-2 {
   color: red;
 }
