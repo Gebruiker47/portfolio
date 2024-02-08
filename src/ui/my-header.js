@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "lit-element";
+import { LitElement, html, css } from "lit";
 
 export class MyHeader extends LitElement {
   static get properties() {
@@ -12,21 +12,22 @@ export class MyHeader extends LitElement {
     this.title = "Your title";
   }
   static styles = css`
-    :host {
-      .header {
-        width: 100%;
-        padding: 20px;
-        margin: 10px;
-        background: var(--header-background);
-        color: var(--header-color);
-      }
+    .container {
+      margin: 10px;
+      overflow: hidden;
+    }
+    .header {
+      width: 100%;
+      padding: 20px;
+      background: var(--header-background);
+      color: var(--header-color);
     }
   `;
 
   render() {
     return html`
-      <div class="header">
-        ${this.title}
+      <div class="container">
+        <h1 class="header">${this.title}</h1>
         <slot></slot>
       </div>
     `;
